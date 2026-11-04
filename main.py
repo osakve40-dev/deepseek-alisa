@@ -23,10 +23,10 @@ async def main(request: Request):
     answer = response.json()["choices"][0]["message"]["content"]
 
     return {
-        "version": body["version"],
-        "session": body["session"],
+        "version": "1.0",
         "response": {
             "end_session": False,
-            "text": answer
+            "text": answer,
+            "tts": answer
         }
     }
